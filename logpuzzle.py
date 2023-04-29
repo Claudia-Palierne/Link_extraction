@@ -61,7 +61,8 @@ def download_images(img_urls, dest_dir):
     Creates the directory if necessary.
     """
     if not os.path.exists(dest_dir):
-        os.makedirs(dest_dir)
+        #os.makedirs(dest_dir)
+        dest_dir = os.getcwd()
     try:
         with open(dest_dir+"/index.html", "w") as index:
             index.write("<html>\n<body>\n")
